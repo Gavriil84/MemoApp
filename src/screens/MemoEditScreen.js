@@ -2,17 +2,18 @@ import React from 'react'
 import { View, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native';
 import AppBar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';
+import KeyboardSafeView from '../components/KeyboardSafeView';
 
 const MemoEditScreen = () => {
     return (
-        <KeyboardAvoidingView style={styles.container} behavior="height">
+        <KeyboardSafeView style={styles.container} behavior="height">
             <AppBar />
 
             <View style={styles.inputContainer}>
                 <TextInput value="Shop List" multiline style={styles.input} />
             </View>
             <CircleButton name="check" />
-        </KeyboardAvoidingView>
+        </KeyboardSafeView>
     )
 }
 
